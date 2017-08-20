@@ -25,6 +25,7 @@
          font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
          color: gray;
          font-size: 20px;
+         line-height: 160%;
       }
 
       /* targets nav bar */
@@ -72,7 +73,7 @@
       #m-container {
          height: 1100px;
          background-image: url("assets/images/concrete.png");
-         height: 1100px;
+         height: 1200px;
          overflow: scroll;
          display: flex;
          padding-bottom: 30px;
@@ -116,59 +117,49 @@
       }
 
       /* icons transitions */
-      .iconic {
+      .iconic1 {
+         color: #4aaaa5;
          -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
          /* Safari */
          transition: color 2s ease, width 2s, height 2s, transform 2s;
       }
 
-      .iconic:hover {
+      .iconic1:hover {
          -webkit-transform: rotate(360deg);
          /* Safari */
          transform: translateY(+30px);
+         color: black;
+      }
+
+      .iconic2 {
          color: #4aaaa5;
+         -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+         /* Safari */
+         transition: color 2s ease, width 2s, height 2s, transform 2s;
       }
 
-      @media only screen and (max-width: 992px) {
-         #t-container {}
+      .iconic2:hover {
+         -webkit-transform: rotate(360deg);
+         /* Safari */
+         transform: translateY(+30px);
+         color: #0084bf;
       }
 
-      @media only screen and (max-width: 768px) {
-         .t-item1 {
-            display: flex;
-            justify-content: center;
-            min-width: 340px;
-         }
+         .iconic3 {
+            color: #4aaaa5;
+         -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+         /* Safari */
+         transition: color 2s ease, width 2s, height 2s, transform 2s;
       }
 
+      .iconic3:hover {
+         -webkit-transform: rotate(360deg);
+         /* Safari */
+         transform: translateY(+30px);
+         color: #e05800;
+      }
 
-      @media only screen and (max-width: 640px) {
-
-         /* targets nav bar */
-         #t-container {
-            flex-direction: column;
-            background-color: white;
-            display: flex;
-            padding-top: 0px;
-         }
-
-
-         .t-item {
-            width: 100%;
-            text-align: center;
-         }
-
-         .t-item2 {
-            display: flex;
-            justify-content: center;
-         }
-
-         .list-item {
-            padding-left: 30px;
-            padding-right: 30px;
-         }
-         /* targets header  */
-         #b-container {
+      #b-container {
             background-color: #666666;
             display: flex;
             height: 90px;
@@ -197,6 +188,7 @@
          #me-img {
             min-width: 300px;
             height: auto;
+           
          }
          .left-section {
             background-color: white;
@@ -221,6 +213,72 @@
             border-bottom: 4px solid #cccccc;
          }
 
+
+      @media only screen and (max-width: 992px) {
+         #t-container {}
+       
+      }
+
+      @media only screen and (max-width: 768px) {
+      
+           #me-img {
+            float: left;
+            margin-right: 20px;
+         } 
+         #m-container {
+         height: 950px;
+   
+        
+      }
+      }
+
+     
+
+
+      @media only screen and (max-width: 640px) {
+
+          /* targets header  */
+          /* #me-img {
+            float: right;
+            margin-right: 120px;
+            margin-left: 90px;
+         } */
+         .ms-div2{
+            display:flex;
+            height: auto;
+            flex:1;
+            justify-content: center;
+         }
+
+         #me-img{
+            height:300px;
+
+         }
+
+         #t-container {
+            flex-direction: column;
+            background-color: white;
+            display: flex;
+            padding-top: 0px;
+         }
+
+
+         .t-item {
+            width: 100%;
+            text-align: center;
+         }
+
+         .t-item2 {
+            display: flex;
+            justify-content: center;
+         }
+
+         .list-item {
+            padding-left: 30px;
+            padding-right: 30px;
+         }
+       
+         
          /* Place CSS ABOVE */
       }
    </style>
@@ -275,9 +333,9 @@
                         <h2>Connect with me</h2>
                      </div>
                      <div class="connect-item connect-item2">
-                        <i id="icon1" class="connect-icon iconic fa fa-github-square fa-4x" aria-hidden="true"></i>
-                        <i id="icon2" class="connect-icon iconic fa fa-linkedin-square fa-4x" aria-hidden="true"></i>
-                        <i id="icon3" class="connect-icon iconic fa fa-stack-overflow fa-4x" aria-hidden="true"></i>
+                        <a href="https://github.com/snowghost24"><i id="icon1" class="connect-icon iconic1 fa fa-github-square fa-4x" aria-hidden="true"></i></a>
+                        <a href="https://www.linkedin.com/in/jose-guzman-05746375/"><i id="icon2" class="connect-icon iconic2 fa fa-linkedin-square fa-4x" aria-hidden="true"></i></a>
+                        <a href="https://stackoverflow.com/users/8027693/jose-guzman"> <i id="icon3" class="connect-icon iconic3 fa fa-stack-overflow fa-4x" aria-hidden="true"></i></a>
                      </div>
 
 
