@@ -2,277 +2,542 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <link rel="stylesheet" href="assets/css/style.css">
-   <!-- TODO: move style into style.css -->
-   <!-- TODO:add links to navbar -->
-   <style>
-      html,
-      body,
-      h1 {
-         margin: 0px;
-         padding: 0px;
-      }
-      /* targets nav bar */
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-      #t-container {
-         border-bottom: 4px solid #cccccc;
-         font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-         background-color: white;
-         display: flex;
-         padding-top: 20px;
-         flex-direction: row;
-         justify-content: space-around;
-         align-items: center;
+	<!-- TODO: move style into style.css -->
+	<!-- TODO: remove all unnecessary comments -->
+	<style>
+		/* css reset */
 
-         /* align-items: center; */
-      }
+		html,
+		body,
+		h1,
+		h2,
+		h3 {
+			margin: 0px;
+			padding: 0px;
+		}
 
-      .t-item {
-         padding: 10px;
-      }
+		p {
+			font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+			color: gray;
+			font-size: 20px;
+			line-height: 160%;
+		}
+		/* targets nav bar */
 
-      .t-item1 {
-         background-color: #4aaaa5;
-         color: white;
-         font-family: 'Georgia', Times, Times New Roman, serif;
-         padding: 30px 40px;
-      }
+		body{
+			max-width: 991 !important;
+		}
 
-      .t-item2 {
-         display: flex;
-         align-items: center;
-         padding-left: 10px;
-         padding-right: 10px;
-         list-style: none;
-      }
-
-      .list-item {
-         padding: 5px 10px;
-         color: gray;
-      }
-
-      .list-item2 {
-         border-left: 2px solid gray;
-         border-right: 2px solid gray;
-      }
-      /* targets middle content div */
-
-      #m-container {
-         height: 1200px;
-         background-image: url("assets/images/concrete.png");
-         height: 1200px;
-         overflow: scroll;
-         display: flex;
-         /* flex-wrap: wrap;
-         flex-direction: row; */
-         padding-bottom: 30px;
-         padding-left: 20px;
-         padding-right: 20px;
+		#wrapper {
+			max-width: 991px;
+			margin-left: auto;
+			margin-right: auto;
+		}
 
 
+		#t-container {
+			border-bottom: 4px solid #cccccc;
+			font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+			background-color: white;
+			display: flex;
+			padding-top: 20px;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+		}
 
-         /*TODO:Make sure you include the image at the e
-         /* background-image: url("../images/concrete.png"); */
-      }
+		.t-item {
+			padding: 10px;
+		}
 
-   
-      @media only screen and (max-width: 992px) {
-         #t-container {}
-      }
+		.t-item1 {
+			background-color: #4aaaa5;
+			color: white;
+			font-family: 'Georgia', Times, Times New Roman, serif;
+			padding: 30px 40px;
+		}
 
-      @media only screen and (max-width: 768px) {
-         #t-container {}
-         .t-item1 {
-            display: flex;
-            justify-content: center;
-            min-width: 340px;
+		.t-item2 {
+			display: flex;
+			align-items: center;
+			padding-left: 10px;
+			padding-right: 10px;
+			list-style: none;
+		}
 
-         }
+		.list-item {
+			padding: 5px 10px;
+			color: gray;
+		}
 
-         
+		.list-item2 {
+			border-left: 2px solid gray;
+			border-right: 2px solid gray;
+		}
+		/* targets middle content div */
 
-         @media only screen and (max-width: 640px) {
+		#m-container {
 
-            /* targets nav bar */
-            #t-container {
-               flex-direction: column;
-               background-color: white;
-               display: flex;
-               padding-top: 0px;
-            }
-         }
+			background-image: url("assets/images/concrete.png");
+			height: 700px;
+			overflow: scroll;
+			display: flex;
+			padding-bottom: 30px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
 
-         .t-item {
-            width: 100%;
-            text-align: center;
-            
-         }
+		.middle-section {
+			display: flex;
+			background-color: white;
+		}
+		.left-section {
+			background-color: white;
+		
+		}
 
-         .t-item2 {
-            display: flex;
-            justify-content: center;
+		#contact-me {
+			background-color: white;
+			color: #4aaaa5;
+			font-family: 'Georgia', Times, Times New Roman, serif;
+			padding-top: 10px;
+			margin-bottom: 20px;
+		}
 
-         }
-         .list-item {
-            padding-left: 30px;
-            padding-right: 30px;
-         }
+		.ms-div {
+			margin-left: 30px;
+			margin-top: 40px;
+			margin-right: 30px;
+		}
 
-         /* targets header  */
-         #b-container {
-            background-color: #666666;
-            display: flex;
-            height: 90px;
-            justify-content: center;
-         }
-         footer {
-            justify-content: flex-end;
-            border-top: 10px solid #4aaaa5;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            flex: 1;
-            justify-content: center;
-         }
-         #copyright {
-            color: white;
-         }
+		.ms-div1 {
+			padding-top: 10px;
+			border-bottom: 4px solid #cccccc;
+		}
+		/* Targets footer and bottom container */
+
+		#b-container {
+			background-color: #666666;
+			display: flex;
+			height: 90px;
+			justify-content: center;
+		}
+
+		footer {
+			justify-content: flex-end;
+			border-top: 10px solid #4aaaa5;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			flex: 1;
+			justify-content: center;
+		}
+
+		#copyright {
+			color: white;
+		}
+		/* Targets connect box */
+
+		#connect-box {
+			background-color: white;
+		}
+
+		.connect-item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.connect-item1 {
+			border-bottom: 4px solid #cccccc;
+			text-align: center;
+			padding: 40px;
+			color: #4aaaa5;
+		}
+
+		.connect-item2 {
+			display: flex;
+			justify-content: space-around;
+			flex-direction: row;
+			padding-bottom: 30px;
+			padding-top: 20px;
+		}
+
+		#icon1 {
+			margin-left: 20%;
+		}
+
+		#icon3 {
+			margin-right: 20%;
+		}
+		/* icons transitions */
+
+		.iconic1 {
+			color: #4aaaa5;
+			-webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+			/* Safari */
+			transition: color 2s ease, width 2s, height 2s, transform 2s;
+		}
+
+		.iconic1:hover {
+			-webkit-transform: rotate(360deg);
+			/* Safari */
+			transform: translateY(+30px);
+			color: black;
+		}
+
+		.iconic2 {
+			color: #4aaaa5;
+			-webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+			/* Safari */
+			transition: color 2s ease, width 2s, height 2s, transform 2s;
+		}
+
+		.iconic2:hover {
+			-webkit-transform: rotate(360deg);
+			/* Safari */
+			transform: translateY(+30px);
+			color: #0084bf;
+		}
+
+		.iconic3 {
+			color: #4aaaa5;
+			-webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+			/* Safari */
+			transition: color 2s ease, width 2s, height 2s, transform 2s;
+		}
+
+		.iconic3:hover {
+			-webkit-transform: rotate(360deg);
+			/* Safari */
+			transform: translateY(+30px);
+			color: #e05800;
+		}
+		/* Targets form*/
+
+		form {
+		
+			padding: 0 20px 20px 20px;
+		}
+
+		input,
+		label,
+		textarea {
+			display: block;
+			width: 100%;
+			font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+			color: gray;
+			font-size: 15px;
+		}
+
+		label {
+			font-weight: bold;
+			margin-bottom: 5px;
+		}
+
+		input,
+		textarea {
+			background: #f9f9f9;
+			border: 1px solid #e5e5e5;
+			border-radius: 2px;
+			font-size: 16px;
+			padding: 8px;
+		}
 
 
-         /* Targets middle content */
-
-         .middle-section {
-            display: flex;
-            background-color: white;
-         }
 
 
-      }
-   </style>
+
+
+
+	</style>
+
+
+	<style>
+		/* 
+   //TODO:Media Query does not respond at this ration */
+
+		@media only screen and (max-width: 993px)and (min-width: 769px) {
+			#wrapper {
+				max-width: 992px;
+			}
+
+			.box-img {
+				width: 259px;
+				height: 147px;
+				margin:10px;
+				border: 1 solid purple;
+			}
+			 .middle-sections{
+				 display: flex;
+				 height: 700px;
+				
+				 flex-direction: row;
+				 width: 992px;
+				 justify-content: space-around;
+				 height: max-content
+				
+			 }
+			
+			 
+			 .left-section {
+					height: max-content;
+					 min-width: 350px;
+					
+				 }
+
+			 #connect-box{
+				 height: min-content;
+			 }
+
+			 body{
+			max-width: 991 !important;
+		}
+
+		
+
+     
+   }
+
+ 
+			/* #m-container {
+			flex-direction: column;
+			flex-wrap: wrap;
+			height: 700px;
+			overflow: scroll;
+			display: flex;
+			padding-bottom: 30px;
+			padding-left: 20px;
+			padding-right: 20px;
+			margin-right: 10px
+		} */
+			 /* .middle-sections {
+				display: flex;
+				padding-top: 25px;
+				justify-content: space-around;
+				
+			}
+
+			.section {
+				flex-grow: 1;
+			}
+
+			.left-section {
+				flex-grow: 2;
+				padding-right: 20px;
+			}
+
+			.right-section {
+				flex-flow: 1;
+				padding-left: 20px;
+				min-width: 270px;
+			}  */
+
+
+		
+
+		
+
+		@media only screen and (max-width: 768px) and (min-width: 641px) {
+			#m-container {
+				display: flex;
+			flex-direction: column;
+			height: 700px;
+			overflow: scroll;
+			display: flex;
+			padding-bottom: 30px;
+			padding-left: 20px;
+			padding-right: 20px;
+			margin-right: 10px
+		}
+
+		#connect-box {
+			margin-bottom: 20px;
+			margin-top: 40px;
+			margin-left: 0px;
+			max-height: 279px;
+		} 
+		.box-img {
+ 
+    width: 100%;
+	 height: 350px;
+	 max-width: 500px;
+}
+
+.icons-box{
+	position: relative;
+	max-width: 500px;
+	min-width: 417;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ipic{
+	position: absolute;
+	bottom:30px;
+	height: 70px;
+	right: 0px;
+	left: 0px;
+	z-index: 1;
+	width: 100%;
+	background-color: #4aaaa5;
+	
+}	body{
+			max-width: 991 !important;
+		}
+	
+		}
+
+		@media only screen and (max-width: 640px ) {
+			.t-item1 {
+				background-color: #4aaaa5;
+				color: white;
+				font-family: 'Georgia', Times, Times New Roman, serif;
+				padding: 30px 40px;
+				width: 100%;
+			text-align: center;
+			}
+		
+		#t-container {
+			border-bottom: 4px solid #cccccc;
+			font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+			background-color: white;
+			display: flex;
+			padding-top: 20px;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		#m-container {
+			flex-direction: column;
+			height: 700px;
+			overflow: scroll;
+			display: flex;
+			padding-bottom: 30px;
+			padding-left: 20px;
+			padding-right: 20px;
+			margin-right: 10px;
+			
+		}
+		.left-section {
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1px;
+		}
+
+
+
+		#connect-box {
+			margin-bottom: 20px;
+			margin-top: 40px;
+			width: auto;
+			
+		}
+
+
+		.box-img {
+ 
+    width: 100%;
+	 height: 300px;
+	 max-width: 500px;
+}
+
+.icons-box{
+	position: relative;
+	max-width: 500px;
+	min-width: 417;
+}
+
+.ipic{
+	position: absolute;
+	bottom:30px;
+	height: 70px;
+	right: 0px;
+	left: 0px;
+	z-index: 1;
+	width: 100%;
+	background-color: #4aaaa5;
+	
+}
+
+#wrapper {
+	min-width: 500px;
+}
+body{
+			max-width: 991 !important;
+		}
+			/* Place CSS ABOVE */
+		}
+	</style>
 </head>
 
 <body>
-   <div id="wrapper">
-      <!-- targets nav bar -->
-      <div id="t-container" class="container">
-         <h1 class="t-item t-item1">Jose J Guzman</h1>
-         <ul class="t-item t-item2">
-            <li class="list-item list-item1">About Me</li>
-            <li class="list-item list-item2">Portfolio</li>
-            <li class="list-item list-item3">Contact</li>
-         </ul>
-      </div>
-      <!-- this is the suble patter background -->
-      <div id="m-container" class="container">
+	<div id="wrapper">
+		<!-- targets nav bar -->
+		<div id="t-container" class="container">
+			<h1 class="t-item t-item1">Jose J Guzman</h1>
+			<ul class="t-item t-item2">
+				<a href="index.html">
+					<li class="list-item list-item1">About Me</li>
+				</a>
+				<a href="portfolio.html">
+					<li class="list-item list-item2">Portfolio</li>
+				</a>
+				<a href="contact.html">
+					<li class="list-item list-item3">Contact</li>
+				</a>
+			</ul>
+		</div>
+		<!-- this is the suble patter background -->
+		<div id="m-container" class="container">
+				<!-- set to handle middle section layout -->
+			<div class="middle-sections">
+					<div class="left-section section">
+						<div class="ms-div ms-div1">
+							<h2 id="contact-me">Portfolio</h2>
+						</div>
+						<div class="ms-div ms-div2">
+								<div class="spaces">
+										<div  class="icons-box"><img class="box-img" src="assets/images/htmlimg.jpeg" alt=""><h3 id="pic1" class="ipic">HTML</h3></div>
+										<div  class="icons-box"><img class="box-img" src="assets/images/cssimg.png" alt=""><h3 id="pic2" class="ipic">CSS</h3 ></div>
+										<div  class="icons-box"><img class="box-img" src="assets/images/javascripimg.png" alt=""><h3 id="pic3" class="ipic">Javascript</h3></div>
+										<div class="icons-box"><img class="box-img" src="assets/images/php-img.jpg" alt=""><h3 id="pic4" class="ipic" >PHP</h3></div>
+										<div  class="icons-box"><img class="box-img" src="assets/images/sqlimg.png" alt=""><h3 id="pic5" class="ipic">SQL</h3></div>
+								</div>
+						</div>
+					</div>
+				
+			
 
-         <!-- set to handle middle section layout -->
-         <div class="middle-sections">
-            
-            <div class="left-section section">
-               <div><h2>About Me</h2></div>
-                  <div class="img1">
-                        
-                        </div>
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quibusdam esse maxime aut facilis eveniet suscipit libero a
-               ut, sint placeat rem ipsam, quos saepe sunt delectus dicta consequatur perferendis! Lorem ipsum dolor sit
-               amet consectetur adipisicing elit. Quis quibusdam esse maxime aut facilis eveniet suscipit libero a ut, sint
-               placeat rem ipsam, quos saepe sunt delectus dicta consequatur perferendis! Lorem ipsum dolor sit amet consectetur
-               adipisicing elit. Quis quibusdam esse maxime aut facilis eveniet suscipit libero a ut, sint placeat rem ipsam,
-               quos saepe sunt delectus dicta consequatur perferendis! Lorem ipsum dolor sit amet consectetur adipisicing
-               elit. Quis quibusdam esse maxime aut facilis eveniet suscipit libero a ut, sint placeat rem ipsam, quos saepe
-               sunt delectus dicta consequatur perferendis!
-            </div>
 
-            <div class="right-section section">
-            </div>
-         </div>
-
-      </div>
-
-      <div id="b-container" class="container">
-         <footer>
-            <div id="copyright">
-               &copy; Copyright Snowghost</div>
-      </div>
-      </footer>
-   </div>
-   </div>
-
+			<div id="connect-box">
+				<div class="connect-item connect-item1">
+					<h2>Connect with me</h2>
+				</div>
+				<div class="connect-item connect-item2">
+					<a href="https://github.com/snowghost24"><i id="icon1" class="connect-icon iconic1 fa fa-github-square fa-4x" aria-hidden="true"></i></a>
+					<a href="https://www.linkedin.com/in/jose-guzman-05746375/"><i id="icon2" class="connect-icon iconic2 fa fa-linkedin-square fa-4x" aria-hidden="true"></i></a>
+					<a href="https://stackoverflow.com/users/8027693/jose-guzman"> <i id="icon3" class="connect-icon iconic3 fa fa-stack-overflow fa-4x" aria-hidden="true"></i></a>
+				</div>
+					</div>
+			</div>
+		</div>
+		<div id="b-container" class="container">
+				<footer>
+					<div id="copyright">
+						&copy; Copyright Snowghost
+					</div>
+				</footer>
+			</div>
+	</div>
 </body>
 
 </html>
-
-/* #container2 {
-      height: 1100px;
-      overflow: scroll;
-      display: flex;
-   }
-   .middle-sections {
-      display: flex;
-      width: 992px;
-   
-      justify-content: space-between;
-     
-      margin-top: 40px;
-      height: 1200px;
-      
-   }
-
-   .left-section {
-      margin-right: auto;
-      max-width: 432px;
-   }
-
-   .right-section {
-      max-width: 270px;
-   }
-
-} */
-
-
-
-
-
-
-
-
-
-
-/* #m-container {
-      height: 1100px;
-      overflow: scroll;
-      display: flex;
-      padding-bottom: 30px;
-      padding-left: 20px;
-      padding-right: 20px;
-      
-   }
-
-      #copyright {
-         color: blue;
-      }
-
-      .middle-sections {
-         display: flex;
-         width: 992px;
-         flex-direction: row;
-         justify-content: space-around;
-         align-items: flex-start;
-         margin-top: 40px;
-
-
-      }
-
-      .left-section {
-        max-width: 550px;
-      }
-
-      .right-section {
-         
-         min-width: 300px;
-      } */
-      /* 
-       Write code above        */
